@@ -116,7 +116,9 @@ let symbolArr = Object.keys(charMap)
 let symbolArrSeq = symbolArr.sort((a, b) => b.length - a.length)
 
 export let replaceCharSymbols = (str = '') => {
-  return str.replace(/\/:[\u0000-\u00ff]{1,10}/g, $0 => {
+  // 进一步缩小有效字符区间 提高匹配精准度 完善当前测试覆盖率
+  // return str.replace(/\/:[\u0000-\u00ff]{1,10}/g, $0 => {
+  return str.replace(/\/:[\u0021-\u007e]{1,10}/g, $0 => {
     let symbol = symbolArrSeq.find(v => $0.startsWith(v))
     if (symbol) {
       // let code = charToCode(symbol)

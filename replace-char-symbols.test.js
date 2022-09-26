@@ -11,6 +11,7 @@ https://mp.weixin.qq.com/s/jLMBp1e7BC-PGr2tLEQpRQ
 居民用电高档贵/::,@
 煤炭产量有保障[Rich]
 汽车消费发补贴/::B
+/:foo bar
   `.trim()
   expect(replaceCharSymbols(text)).toEqual(`
 https://mp.weixin.qq.com/s/jLMBp1e7BC-PGr2tLEQpRQ
@@ -21,5 +22,6 @@ https://mp.weixin.qq.com/s/jLMBp1e7BC-PGr2tLEQpRQ
 居民用电高档贵[悠闲]
 煤炭产量有保障[Rich]
 汽车消费发补贴[色]
+/:foo bar
   `.trim())
 })

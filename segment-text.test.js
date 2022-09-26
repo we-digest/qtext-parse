@@ -11,6 +11,7 @@ https://mp.weixin.qq.com/s/jLMBp1e7BC-PGr2tLEQpRQ
 居民用电高档贵[悠闲]
 煤炭产量有保障[Rich]
 汽车消费发补贴[色]
+foo bar
   `.trim()
   expect(segmentText(text)).toMatchInlineSnapshot(`
     [
@@ -76,6 +77,11 @@ https://mp.weixin.qq.com/s/jLMBp1e7BC-PGr2tLEQpRQ
       {
         "index": 2,
         "type": "qqface",
+      },
+      {
+        "text": "
+    foo bar",
+        "type": "text",
       },
     ]
   `)
