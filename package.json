@@ -1,0 +1,35 @@
+{
+  "name": "qtext-parse",
+  "version": "0.0.2",
+  "description": "含QQ表情 文本替换解析库",
+  "keywords": [
+    "qq",
+    "face",
+    "emotion",
+    "wqq",
+    "qqlog"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/we-digest/qtext-parse.git"
+  },
+  "license": "ISC",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "replace-char-symbols.js",
+    "segment-text.js"
+  ],
+  "scripts": {
+    "coverage": "vitest run --coverage",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "qqface": "next"
+  },
+  "devDependencies": {
+    "@vitest/coverage-c8": "^0.23.4",
+    "vitest": "^0.23.4"
+  }
+}
