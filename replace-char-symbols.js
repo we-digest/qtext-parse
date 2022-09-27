@@ -1,9 +1,11 @@
 // 这里组合使用wx-qqface和qqface 目的是能得到符合自己预期的与微信对齐的表情text
 // https://github.com/fritx/qqface/blob/ecd4dbf4e0733d8060ef90308a14e2830ee8be09/index.js#L10-L40
 // https://github.com/uojo/wx-qqface/issues/1
-// 注意 这里wx-qqface导出的charMap实际是数组形式
-import { charMap as charArr } from 'wx-qqface'
+import wxqqface from 'wx-qqface'
 import { textFromIndex } from 'qqface'
+
+// 注意 这里wx-qqface导出的charMap实际是数组形式
+let charArr = wxqqface.charMap
 
 // 重新转换得到charMap 优化时间复杂度
 let charMap = charArr.reduce((acc, v, i) => (acc[v] = i, acc), {})
