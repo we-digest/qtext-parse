@@ -1,7 +1,8 @@
-import { expect, it } from 'vitest'
+import 'chai-inline-snapshot'
+import { expect } from 'chai'
 import { segmentText } from './segment-text.js'
 
-it('segmentText', () => {
+export let test = () => {
   let text = `
 https://mp.weixin.qq.com/s/jLMBp1e7BC-PGr2tLEQpRQ
 周日读报[愉快]
@@ -13,7 +14,7 @@ https://mp.weixin.qq.com/s/jLMBp1e7BC-PGr2tLEQpRQ
 汽车消费发补贴[色]
 foo bar
   `.trim()
-  expect(segmentText(text)).toMatchInlineSnapshot(`
+  expect(segmentText(text)).to.matchInlineSnapshot(`
     [
       {
         "text": "https://mp.weixin.qq.com/s/jLMBp1e7BC-PGr2tLEQpRQ
@@ -85,4 +86,4 @@ foo bar
       },
     ]
   `)
-})
+}

@@ -1,7 +1,7 @@
-import { expect, it } from 'vitest'
+import { expect } from 'chai'
 import { replaceCharSymbols } from './replace-char-symbols.js'
 
-it('replaceCharSymbols', () => {
+export let test = () => {
   let text = `
 https://mp.weixin.qq.com/s/jLMBp1e7BC-PGr2tLEQpRQ
 周日读报/:,@-D
@@ -13,7 +13,7 @@ https://mp.weixin.qq.com/s/jLMBp1e7BC-PGr2tLEQpRQ
 汽车消费发补贴/::B
 /:foo bar
   `.trim()
-  expect(replaceCharSymbols(text)).toEqual(`
+  expect(replaceCharSymbols(text)).to.equal(`
 https://mp.weixin.qq.com/s/jLMBp1e7BC-PGr2tLEQpRQ
 周日读报[愉快]
 新数字经济协定[强]
@@ -24,4 +24,4 @@ https://mp.weixin.qq.com/s/jLMBp1e7BC-PGr2tLEQpRQ
 汽车消费发补贴[色]
 /:foo bar
   `.trim())
-})
+}
