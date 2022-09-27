@@ -26,7 +26,8 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "qqface": "next"
+    "qqface": "0.2.0-alpha.1",
+    "wx-qqface": "^0.2.0"
   },
   "devDependencies": {
     "@vitest/coverage-c8": "^0.23.4",
