@@ -12,6 +12,8 @@ https://mp.weixin.qq.com/s/jLMBp1e7BC-PGr2tLEQpRQ
 煤炭产量有保障[Rich]
 汽车消费发补贴[色]
 foo bar
+[]
+[404]
   `.trim()
   expect(segmentText(text)).toMatchInlineSnapshot(`
     [
@@ -80,7 +82,9 @@ foo bar
       },
       {
         "text": "
-    foo bar",
+    foo bar
+    []
+    [404]",
         "type": "text",
       },
     ]
