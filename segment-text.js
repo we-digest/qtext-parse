@@ -1,6 +1,43 @@
 import { indexFromText } from 'qqface'
 
+let latestEmojiMap = Object.create(null)
+Object.assign(latestEmojiMap, {
+  'Lol': '😂',
+  'Facepalm': '😅',
+  'Terror': '😱',
+  'Flushed': '😳',
+  'Emm': '😶',
+  'Awesome': '👍', // fallback
+  'LetMeSee': '🧐',
+  'Boring': '白眼',
+  'Wow': '😍',
+  'MyBad': '🤕',
+  'NoProb': '👌',
+  'Respect': '👍', // fallback
+  'Sweats': '😓',
+  'OMG': '😯',
+  'Sigh': '😞',
+  'Broken': '💔', // fallback
+  'Hurt': '😭',
+  'Packet': '🧧',
+  'GoForIt': '奋斗',
+  'Onlooker': '👀',
+  'Concerned': '🥺',
+  'Yeah!': '🥳',
+  'Smirk': '😏',
+  'Hey': '👋', // fallback
+  'Duh': '😒',
+  'LetDown': '😔',
+  'Sick': '😷',
+  'Worship': '🤕',
+  'Party': '🎉',
+  'Blessing': '🙏',
+})
+let latestEmojiKeys = Object.keys(latestEmojiMap)
+let latestEmojiRegexG = new RegExp(`\\[(${latestEmojiKeys.join('|')})\\]`, 'g')
+
 export let segmentText = (str = '') => {
+  str = str.replace(latestEmojiRegexG, ($0, $1) => latestEmojiMap[$1] || $0)
   let segments = []
   let reg = /\[([^\]]+)\]/
   let mat = null
