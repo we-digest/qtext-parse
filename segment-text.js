@@ -52,7 +52,7 @@ export let segmentText = (str = '') => {
       str = str.slice(mat.index + m0.length)
       mirror = mirror.slice(mat.index + m0.length)
     } else {
-      let stub = mirror.slice(mat.index, mat.index + m0.length).replace(/./g, 'x')
+      let stub = mirror.slice(0, mat.index + m0.length).replace(/[\s\S]/g, 'x')
       mirror = stub + mirror.slice(mat.index + m0.length)
     }
   }
