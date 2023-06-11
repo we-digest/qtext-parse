@@ -6,7 +6,7 @@ it('segmentText - [Lol]', () => {
 https://mp.weixin.qq.com/s/jLMBp1e7BC-PGr2tLEQpRQ
 周二读报[愉快]
 中小银行降利率[Lol]
-非学科培训监测[悠闲]
+非学科培训监测[Boring][GoForIt][悠闲]
   `.trim()
   expect(segmentText(text)).toMatchInlineSnapshot(`
     [
@@ -24,6 +24,14 @@ https://mp.weixin.qq.com/s/jLMBp1e7BC-PGr2tLEQpRQ
     中小银行降利率😂
     非学科培训监测",
         "type": "text",
+      },
+      {
+        "index": 22,
+        "type": "qqface",
+      },
+      {
+        "index": 30,
+        "type": "qqface",
       },
       {
         "index": 29,

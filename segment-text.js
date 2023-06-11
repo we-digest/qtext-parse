@@ -9,7 +9,7 @@ Object.assign(latestEmojiMap, {
   'Emm': '😶',
   'Awesome': '👍', // fallback
   'LetMeSee': '🧐',
-  'Boring': '白眼',
+  'Boring': '[白眼]',
   'Wow': '😍',
   'MyBad': '🤕',
   'NoProb': '👌',
@@ -20,7 +20,7 @@ Object.assign(latestEmojiMap, {
   'Broken': '💔', // fallback
   'Hurt': '😭',
   'Packet': '🧧',
-  'GoForIt': '奋斗',
+  'GoForIt': '[奋斗]',
   'Onlooker': '👀',
   'Concerned': '🥺',
   'Yeah!': '🥳',
