@@ -4,6 +4,7 @@ let latestEmojiMap = Object.create(null)
 Object.assign(latestEmojiMap, {
   'Lol': '😂',
   'Facepalm': '😅',
+  '捂脸': '😅',
   'Terror': '😱',
   'Flushed': '😳',
   'Emm': '😶',
@@ -39,7 +40,7 @@ let latestEmojiRegexG = new RegExp(`\\[(${latestEmojiKeys.join('|')})\\]`, 'g')
 export let segmentText = (str = '') => {
   str = str.replace(latestEmojiRegexG, ($0, $1) => latestEmojiMap[$1] || $0)
   let segments = []
-  let reg = /\[([^\]]+)\]/
+  let reg = /\[(.{1,10}?)\]/
   let mat = null
   let mirror = str
   while (mat = mirror.match(reg)) {
