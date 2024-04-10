@@ -7,6 +7,16 @@ import { textFromIndex } from 'qqface'
 // 注意 这里wx-qqface导出的charMap实际是数组形式
 let charArr = wxqqface.charMap
 
+// ** fix: 修复wxqqface charArr中间部分下标错位
+// https://github.com/uojo/wx-qqface/blob/bf7895142235670617be2dbc47b060240d2c6c27/src/charMap.js#L11-L17
+charArr[9] = "/::'("
+charArr[10] = "/::-|"
+charArr[11] = "/::@"
+charArr[12] = "/::P"
+charArr[13] = "/::D"
+charArr[14] = "/::O"
+charArr[15] = "/::("
+
 // 重新转换得到charMap 优化时间复杂度
 let charMap = charArr.reduce((acc, v, i) => (acc[v] = i, acc), {})
 
