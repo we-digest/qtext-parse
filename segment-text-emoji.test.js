@@ -12,7 +12,7 @@ it('segmentText - emoji', () => {
       {
         "text": "😅😅
     👍😍🎉
-    🧐🥺🙏",
+    👀🥺🙏",
         "type": "text",
       },
     ]
