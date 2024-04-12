@@ -10,7 +10,7 @@ it('segmentText - emoji', () => {
   expect(segmentText(text)).toMatchInlineSnapshot(`
     [
       {
-        "text": "😅😅
+        "text": "😳😳
     👍😍🎉
     👀🥺🙏",
         "type": "text",

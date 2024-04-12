@@ -6,8 +6,10 @@ let latestEmojiMap = Object.create(null)
 Object.assign(latestEmojiMap, {
   'Lol': '😂',
   '破涕为笑': '😂',
-  'Facepalm': '😅',
-  '捂脸': '😅',
+  // ** 注意[捂脸]在部分半严肃语境下不应包含笑脸
+  // 😅 😭 😳 😦 😯 😱
+  'Facepalm': '😳', // fallback
+  '捂脸': '😳', // fallback
   'Terror': '😱',
   '恐惧': '😱',
   'Flushed': '😳',
